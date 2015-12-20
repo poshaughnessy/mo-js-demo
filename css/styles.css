@@ -17,6 +17,7 @@ body {
 
 #container span {
   position: absolute;
+  transform: translateY(-100px);
 }
 
 #container span:nth-child(1) { /* p */

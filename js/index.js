@@ -1,12 +1,24 @@
 var letters = document.querySelectorAll('#container span');
 
-var p = letters[0];
+var bounceTweens = new mojs.Timeline();
 
-new mojs.Tween({
-  repeat: 999,
-  delay: 500,
-  onUpdate: function(progress) {
-    var bounceProgress = mojs.easing.bounce.out(progress);
-    p.style.transform = 'translateY(' + 200*bounceProgress + 'px)';
-  }
-})//.run();
+function createBounceTween(i) {
+
+  var letter = letters[i];
+
+  return new mojs.Tween({
+    delay: i * 500,
+    onUpdate: function(progress) {
+      var bounceProgress = mojs.easing.bounce.out(progress);
+      letter.style.transform = 'translateY(' + (300 * bounceProgress - 100) + 'px)';
+    }
+  });
+}
+
+
+for( var i=0; i < letters.length; i++ ) {
+  bounceTweens.add(createBounceTween(i));
+}
+
+bounceTweens.start();
+
