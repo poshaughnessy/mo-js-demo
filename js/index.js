@@ -11,7 +11,7 @@ function createBounceTween(i) {
   var letterProgress = i / letters.length;
 
   return new mojs.Tween({
-    delay: 500 + 1000 * (letterProgress * (2-letterProgress)),
+    delay: 500 + 2000 * (letterProgress * (2-letterProgress)),
     duration: 500,
     onStart: function() {
       setTimeout(function() {
