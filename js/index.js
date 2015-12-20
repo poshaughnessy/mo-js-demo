@@ -10,7 +10,7 @@ function createBounceTween(i) {
   var letter = letters[i];
 
   return new mojs.Tween({
-    delay: 100 + i * 300,
+    delay: 500 + i * 300,
     duration: 500,
     onStart: function() {
       setTimeout(function() {
