@@ -1,6 +1,6 @@
 var windowHeight = window.innerHeight;
 var halfWindowHeight = windowHeight / 2;
-var letters = document.querySelectorAll('#container span');
+var letters = document.querySelectorAll('#container img');
 var bounceTweens = new mojs.Timeline();
 
 var kickSound = new Howl({urls: ['sounds/ping-pong-bounce.mp3', 'sounds/ping-pong-bounce.wav'], volume: 0.2})
